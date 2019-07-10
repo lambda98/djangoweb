@@ -1,5 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
+
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -31,13 +31,13 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'mobile-product'%}">สินค้าใหม่</a>
+        <a class="nav-link" href="{% url 'mobile-home'%}">หน้าหลัก</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'mobile-about'%}">เกี่ยวกับร้านค้า</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ชำระเงินค่าสินค้า</a>
+        <a class="nav-link" href="{% url 'mobile-ems'%}">EMS</a>
       </li>
     </ul>
   </div>
@@ -60,31 +60,22 @@
           <a class="nav-link active" href="#">Active</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">สินค้าใหม่</a>
+          <a class="nav-link" href="{% url 'mobile-home'%}">หน้าหลัก</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">เกี่ยวกับร้านค้า</a>
+          <a class="nav-link" href="{% url 'mobile-about'%}">เกี่ยวกับร้านค้า</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">ยกเลิกบริการ</a>
+          <a class="nav-link disabled" href="{% url 'mobile-ems'%}">EMS</a>
         </li>
       </ul>
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
-      <h2>ใหม่จ้า Huawei mate X จอพับสุดสวย</h2>
-      <h5>เพิ่มสินค้าใหม่, วันที่ 10/7/2019</h5>
-      <div class="fakeimg"><img src="{% static 'mobile/mate.jpg' %}" width="300"></div>
-      <p>มาแล้วจ้าของใหม่</p>
-      <p>เปิดตัวมาอย่างอลังการสมการรอคอยกันเลยทีเดียว กับ Huawei Mate X  มือถือจอพับ รองรับ 5G รุ่นแรกของค่ายที่เรียกเรียกเสียงฮือฮาด้วยหน้าจอ FullView Display แบบไร้ติ่ง มาพร้อมดีไซน์บางเฉียบ สวยหรูดูพรีเมี่ยมมากๆ  เลยล่ะ และหลังจากที่เราชมโฉมตัวเครื่องกันไปแล้ว วันนี้เราก็มีสเปคและจุดเด่นของ Huawei Mate X มาอัปเดตกันจ้า</p>
-      <br>
-      <h2>โทรศัพท์ใหม่ๆ จากทางร้าน ประกันศูนย์ </h2>
-      <h5>เพิ่มข่าวใหม่, วันที่ 10/7/2019</h5>
-      <div class="fakeimg"> <img src="{% static 'mobile/phone.jpg' %}" width="300"></div>
-      <p>มือถือใหม่</p>
-      <p>Galaxy S10 ทั้ง 3 รุ่น ยังคงมีดีไซน์ตัวเครื่องที่แทบจะไม่ต่างจากรุ่นเดิมมากนัก แต่คราวนี้จะมีการเปลี่ยนแปลงอย่างนึงที่เห็นได้ชัดมากๆ ก็คือขอบจอด้านบนที่บางเฉียบกว่าเดิมจนแทบจะหายไปแล้ว เนื่องจากย้ายเอากล้องหน้ามาไว้บนหน้าจอแบบ Infinity-O หรือจอที่เจาะรูเอาไว้ตรงมุมขวาบนนั่นเอง ซึ่งจอ Infinity-O ก็ยังมีความแตกต่างกันอีก คือรุ่น S10+ จะเป็นรูยาวเกือบจะเป็นวงรี เพราะมีกล้องหน้า 2 ตัว ส่วนรุ่น S10 และ S10e จะเป็นแค่รูวงกลมเล็กๆ สำหรับวางกล้องแค่ตัวเดียวเท่านั้น</p>
+     {% block content_product %}
+     {% endblock content_product %}
     </div>
-  </div>
+    </div>
 </div>
 
 <div class="jumbotron text-center" style="margin-bottom:0">

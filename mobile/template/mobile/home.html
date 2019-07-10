@@ -1,7 +1,20 @@
 {% extends "mobile/base.html" %}
-
+{% load static %}
 {% block content %}
-<H1>This is Home page</H1>
-<P>We have 1000 Mobile for sale.</P>
-
 {% endblock content %}
+
+{% block content_product %}
+      {% for p in phonelist %}
+      <div>
+      <hr>
+      <h2>{{ p.product_name }}</h2>
+      {% if p.photo %}
+      <img src="{{ p.photo.url }}" width="520"></div>
+      {% endif %}
+      <p>{{ p.product_desc }}</p>
+      <br>
+      <hr>
+      </div>
+      {% endfor %}
+
+{% endblock content_product %}
