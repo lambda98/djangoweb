@@ -25,7 +25,8 @@ SECRET_KEY = 'jrc++8z^41c5**f!y3ynwwl!xe=3@g3yn0%%7-03^lz$45zc-&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [django-lisa-mobile.herokuapp.com]
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 
 # Application definition
